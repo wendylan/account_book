@@ -22,7 +22,16 @@ App({
             })
         }
     },
-
+    // 获取用户浏览器的locastroge大小
+    getLocastroge: function(){
+        wx.getStorageInfo({
+            success: function (res) {
+                console.log(res.keys)
+                console.log(res.currentSize)
+                console.log(res.limitSize)
+            }
+        })
+    },
     globalData: {
         userInfo: null
     }
