@@ -1,0 +1,7 @@
+/* pages/account/earn/earn.wxss */
+.content{
+    margin: 10px;
+}
+.text_blue{
+    color: #1D8CE0;
+}

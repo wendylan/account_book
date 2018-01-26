@@ -36,3 +36,5 @@ App({
         userInfo: null
     }
 })
+
+// "pages/splash/splash",

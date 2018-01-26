@@ -1,6 +1,5 @@
-<!--logs.wxml-->
-<view class="container log-list">
-    <block wx:for="{{logs}}" wx:for-item="log" wx:key="*this">
-        <text class="log-item">{{index + 1}}. {{log}}</text>
-    </block>
-</view>
+<!--account.wxml-->
+<view class="container"> 
+    <button type="warn" size="mini" bindtap="gotoComsumption"> 消费 </button>
+    <button type="primary" size="mini" bindtap="gotoEarn"> 入账 </button>  
+</view> 

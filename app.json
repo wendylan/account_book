@@ -1,7 +1,9 @@
 {
     "pages":[
-       "pages/splash/splash",
+       
         "pages/index/index",
+        "pages/account/consumption/consumption",
+        "pages/account/earn/earn",
         "pages/account/account",
         "pages/bill/bill",
         "pages/analyze/analyze",
@@ -14,28 +16,38 @@
         "navigationBarTextStyle":"#fff"
     },
     "tabBar": {
-        "color": "#333",
-        "selectedColor": "red",
+        "color": "#999",
+        "selectedColor": "black",
         "list": [
             {
                 "pagePath" : "pages/index/index",
-                "text" : "首页"
+                "text" : "首页",
+                "iconPath" : "images/home.png",
+                "selectedIconPath" : "images/home-actived.png"
             },
             {
                 "pagePath" : "pages/account/account",
-                "text" : "记账"
+                "text" : "记账",
+                "iconPath": "images/note.png",
+                "selectedIconPath": "images/note-actived.png"
             },
             {
                 "pagePath" : "pages/bill/bill",
-                "text" : "账单"
+                "text" : "账单",
+                "iconPath": "images/star.png",
+                "selectedIconPath": "images/star-actived.png"
             },
             {
                 "pagePath" : "pages/analyze/analyze",
-                "text" : "分析"
+                "text" : "分析",
+                "iconPath": "images/safari.png",
+                "selectedIconPath": "images/safari-actived.png"
             },
             {
                 "pagePath" : "pages/my/my",
-                "text" : "我的"
+                "text" : "我的",
+                "iconPath": "images/profile.png",
+                "selectedIconPath": "images/profile-actived.png"
             }
         ]
     },

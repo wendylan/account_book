@@ -1,0 +1,4 @@
+<!--pages/account/earn/earn.wxml-->
+<view class="content">
+    <text class="text_blue">入账:</text>
+</view>

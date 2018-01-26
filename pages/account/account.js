@@ -10,5 +10,19 @@ Page({
                 return util.formatTime(new Date(log))
             })
         })
-    }
+    },
+
+    // 消费
+    gotoComsumption: function () {
+        wx.navigateTo({
+            url: './consumption/consumption'
+        })
+    },
+
+    // 入账
+    gotoEarn: function () {
+        wx.navigateTo({
+            url: './earn/earn'
+        })
+    },
 })

@@ -4,7 +4,11 @@
         <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
         <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </view>
-    <view class="usermotto">
-        <text class="user-motto">{{motto}}</text>
+    <view class="classname">
+
     </view>
+    <view class="usermotto" > 
+        <button type="warn" size="mini" bindtap="gotoComsumption"> 消费 </button>
+        <button type="primary" size="mini" bindtap="gotoEarn"> 入账 </button>  
+    </view> 
 </view>
