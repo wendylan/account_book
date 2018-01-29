@@ -23,15 +23,6 @@ Page({
             })
         })
         app.getLocastroge();
-        // wx.request({
-        //     url: 'https://api.douban.com/v2/movie/coming_soon', //仅为示例，并非真实的接口地址
-        //     header: {
-        //         'content-type': 'application/json' // 默认值
-        //     },
-        //     success: function (res) {
-        //         console.log(res.data)
-        //     }
-        // })
     },
     
     // 消费

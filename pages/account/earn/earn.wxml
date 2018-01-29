@@ -1,4 +1,70 @@
 <!--pages/account/earn/earn.wxml-->
+
 <view class="content">
     <text class="text_blue">入账:</text>
+    <progress percent="0" stroke-width="1" />
+
+    <view class="section">
+        <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+            <view class="section__title">日期:</view>
+            <view class="right">
+                <text>{{date}}</text>
+                <icon class="fa fa-angle-right fa-fw"/> 
+            </view>
+        </picker>
+    </view>
+
+    <progress percent="0" stroke-width="2" />
+
+    <view class="section">
+        <picker mode="time" value="{{time}}" bindchange="bindTimeChange">
+            <view class="section__title">时间:</view>
+            <view class="right">
+                <text>{{time}}</text>
+                <icon class="fa fa-angle-right fa-fw"/> 
+            </view>
+        </picker>
+    </view>
+
+    <progress percent="0" stroke-width="2" />
+
+    <view class="section">
+        <picker value="{{account_type}}" bindchange="bindCountChange" range="{{account_type_arr}}">
+            <view class="section__title">入账类型:</view>
+            <view class="right">
+                 <text>{{account_type_arr[account_type]}}</text> 
+                 <!-- <text>{{account_type}}</text>  -->
+                <icon class="fa fa-angle-right fa-fw"/> 
+            </view>
+        </picker>
+    </view>
+
+    <progress percent="0" stroke-width="2" />
+
+    <!-- 金额 -->
+     <view class="flex_box">
+        <view class="section__title">金额(￥):</view>
+        <view class="text_right">
+            <input bindinput="bindCountValue" type="digit" placeholder="" value="{{sum_value}}"/>
+        </view>
+    </view> 
+
+    <progress percent="0" stroke-width="2" />
+    
+    <!-- 备注 -->
+     <view class="flex_box">
+        <view class="section__title">备注:</view>
+        <view class="text_right">
+            <input type="digit" bindinput="bindRemarks" value="{{remarks_value}}"/>
+        </view>
+    </view> 
+
+    <progress percent="0" stroke-width="2" />
+
+    <view class="button_box">
+        <button type="warn" size="default" bindtap="submitData"> 确认 </button>
+    </view>
+    
 </view>
+
+

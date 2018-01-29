@@ -9,28 +9,135 @@ Page({
     data: {
         date: Until.formatTime(new Date()).date,
         time: Until.formatTime(new Date()).time,
+        account_type_arr: ['水果零食', '餐饮伙食', '出行旅游', '网上购物', '生活日常', '租房水电', '医疗药物', '其它消费'],
+        account_type : 0,
+        sum_value : '',
+        remarks_value : '',
+        oldStorageData : []
     },
 
     // 日期控制
     bindDateChange: function (e) {
-        console.log('picker发送选择改变，携带值为', e.detail.value)
         this.setData({
             date: e.detail.value
         })
     },
     // 时间控制
     bindTimeChange: function (e) {
-        console.log('picker发送选择改变，携带值为', e.detail.value)
         this.setData({
             time: e.detail.value
         })
     },
 
+    // 消费类型
+    bindCountChange: function(e){
+        this.setData({
+            account_type: e.detail.value
+        })
+    },
+
+    // 金额
+    bindCountValue: function(e){
+        this.setData({
+            sum_value: e.detail.value
+        })
+    },
+
+    // 备注：
+    bindRemarks: function (e) {
+        this.setData({
+            remarks_value: e.detail.value
+        })
+    },
+
+    // 数据重构
+    organizeData(data){
+        var bill = {
+            _id: Date.parse(new Date()),
+            sum_value: this.data.sum_value,
+            date: this.data.date,
+            time: this.data.time,
+            remarks_value: this.data.remarks_value,
+            account_type: this.data.account_type,
+            billTypeNumber: this.billTypeNumber(this.data.account_type),
+            consumption_or_earn: 0
+        };
+        data.push(bill);
+        return data;
+    },
+    // 提交数据
+    submitData : function(){
+        // this.organizeData(this.data.oldStorageData);
+        wx.setStorage({
+            key: "bill_arr",
+            data: this.organizeData(this.data.oldStorageData)
+        });
+        this.showToast();
+        this.resetValue();
+    },
+
+    // 消费类型转换英文
+    billTypeNumber(account_type) {
+        switch (account_type) {
+            case 0:
+                account_type = 'sgls';
+                break;
+            case 1:
+                account_type = 'cyhs';
+                break;
+            case 2:
+                account_type = 'cxly';
+                break;
+            case 3:
+                account_type = 'wsgw';
+                break;
+            case 4:
+                account_type = 'shrc';
+                break;
+            case 5:
+                account_type = 'cfsd';
+                break;
+            case 6:
+                account_type = 'ylyw';
+                break;
+            case 7:
+                account_type = 'qt';
+                break;
+        }
+        return account_type;
+    },
+
+    // 显示记账成功提示
+    showToast(){
+        wx.showToast({
+            title: '记账成功',
+            icon: 'success',
+            duration: 2000
+        });
+    },
+
+    // 重置数据
+    resetValue(){
+        this.setData({
+            sum_value: '',
+            remarks_value: '',
+            date: Until.formatTime(new Date()).date,
+            time: Until.formatTime(new Date()).time
+        });
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        console.log(Until.formatTime(new Date()));
+        var _this = this;
+        wx.getStorage({
+            key: 'bill_arr',
+            success: function (res) {
+                _this.setData({
+                    oldStorageData : res.data
+                });
+            }
+        })
     },
 
     /**

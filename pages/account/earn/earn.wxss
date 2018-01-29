@@ -5,3 +5,30 @@
 .text_blue{
     color: #1D8CE0;
 }
+.section{
+    margin: 8px 5px;
+    clear: both;
+}
+.flex_box{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.section__title{
+    display: inline-block;
+}
+.right{
+    display: inline-block;
+    float: right;
+}
+.right input{
+    display: inline-block;
+    clear: both;
+}
+.text_right{
+    text-align: right;
+}
+.button_box{
+    margin-top:30px;
+}

@@ -9,7 +9,7 @@ function formatTime(date) {
 
     return{
         'date' : [year, month, day].map(formatNumber).join('-'),
-        'time' : [hour, minute, second].map(formatNumber).join(':')
+        'time' : [hour, minute].map(formatNumber).join(':')
     }
 }
 

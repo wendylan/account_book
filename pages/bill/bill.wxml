@@ -1,2 +1,16 @@
 <!--pages/bill/bill.wxml-->
-<text>pages/bill/bill.wxml</text>
+<view class="content">
+    <text class="text_blue">账单:</text>
+    <view class="no_bill">
+        <text>没有账单</text>
+    </view>
+
+    <view class="bill_box">
+        <view class="bill_item" wx:for="{{bill_arr}}">
+            <text>{{item.remarks_value}}</text>
+            <text>{{item.sum_value}}</text>
+            <text>{{item.consumption_or_earn == 1 ? '入账' : '消费'}}时间：{{item.date}} {{item.time}}</text>
+            <icon type="clear" size="20" color="red"/>
+        </view>
+    </view>
+</view>

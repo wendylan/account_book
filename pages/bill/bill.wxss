@@ -1,1 +1,11 @@
 /* pages/bill/bill.wxss */
+.content{
+    margin: 10px;
+}
+.text_blue{
+    color: #1D8CE0;
+}
+.no_bill{
+    color: #666;
+    font-size: 14px;
+}
