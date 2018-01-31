@@ -9,3 +9,26 @@
     color: #666;
     font-size: 14px;
 }
+
+.font_bold{
+    font-weight: bold;
+}
+.bill_item{
+    border-bottom:1px solid #dedede; 
+    margin-top: 20rpx;
+}
+.information_box text{
+    color: red;
+    display: inline-block;
+}
+.information_box .text_right{
+    float: right;
+}
+.time_box{
+   font-size: 28rpx;
+   text-align: right; 
+   color:#999;
+}
+.time_box text{
+    margin-right: 20rpx;
+}

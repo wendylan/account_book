@@ -1,3 +1,7 @@
+/**account.wxss**/
+page{
+    background: url('../../images/back.jpg');
+}
 button{
     margin-top: 20px;
 }

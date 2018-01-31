@@ -14,7 +14,7 @@ image{
     left: 50%;
     width: 300rpx;
     margin-left: -150rpx;
-    background-color: #fff;
+    background: #d9ffea;
     color: black;
     font-size: 40rpx;
 }

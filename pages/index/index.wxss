@@ -1,4 +1,7 @@
     /**index.wxss**/
+page{
+    background: url('../../images/back.jpg');
+}
 .userinfo {
     display: flex;
     flex-direction: column;

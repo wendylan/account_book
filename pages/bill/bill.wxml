@@ -1,16 +1,23 @@
 <!--pages/bill/bill.wxml-->
 <view class="content">
     <text class="text_blue">账单:</text>
-    <view class="no_bill">
+    <view class="no_bill" wx:if="{{bill_arr.length==0}}">
         <text>没有账单</text>
     </view>
 
     <view class="bill_box">
-        <view class="bill_item" wx:for="{{bill_arr}}">
-            <text>{{item.remarks_value}}</text>
-            <text>{{item.sum_value}}</text>
-            <text>{{item.consumption_or_earn == 1 ? '入账' : '消费'}}时间：{{item.date}} {{item.time}}</text>
-            <icon type="clear" size="20" color="red"/>
+        <view class="bill_item" wx:for="{{bill_arr}}" wx:key="{{index}}">
+            <view>
+                <view class="information_box">
+                    <text class="font_bold">{{item.remarks_value}}</text>
+                    <text class="font_bold text_right">{{item.sum_value}}￥</text>
+                </view>
+                
+                <view class="time_box">
+                    <text>{{item.consumption_or_earn == 1 ? '入账' : '消费'}}时间：{{item.date}} {{item.time}}</text>
+                    <icon bindtap="delOne" data-index="{{index}}" type="clear" style="margin-top:10rpx;"size="18" color="#FF4949"/>
+                </view>
+            </view>
         </view>
     </view>
 </view>

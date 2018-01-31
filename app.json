@@ -1,6 +1,6 @@
 {
     "pages":[
-       
+        "pages/splash/splash",
         "pages/index/index",
         "pages/account/consumption/consumption",
         "pages/account/earn/earn",
@@ -13,7 +13,8 @@
         "backgroundTextStyle":"light",
         "navigationBarBackgroundColor": "black",
         "navigationBarTitleText": "微记账",
-        "navigationBarTextStyle":"#fff"
+        "navigationBarTextStyle":"#fff",
+        "backgroundColor" : "#eeeeee"
     },
     "tabBar": {
         "color": "#999",
