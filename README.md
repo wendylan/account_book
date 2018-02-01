@@ -1,19 +1,6 @@
-# data-project
+# account_book
 
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
+> A applet of WeChat project
 
 ## 目录结构
 <pre>
