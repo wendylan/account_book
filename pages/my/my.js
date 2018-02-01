@@ -8,8 +8,11 @@ Page({
     },
     //事件处理函数
     bindViewTap: function () {
+        // wx.navigateTo({
+        //     url: '../index/index'
+        // })
         wx.switchTab({
-            url: '../my/my'
+            url: '../index/index'
         })
     },
     onLoad: function () {

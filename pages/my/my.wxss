@@ -19,13 +19,16 @@ page{
 .userinfo-nickname {
     color: #aaa;
 }
+.info_box{
+    width: 70%;
+}
 .info_box .info_content{
      display: inline-block; 
 }
 .info_content text{
     display: block;
 }
-.info_box icon{
+.userinfo icon{
     display: inline-block; 
     color: #999;
 }

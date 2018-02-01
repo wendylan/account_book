@@ -8,8 +8,8 @@
                 <text class="userinfo-nickname">{{userInfo.nickName}}</text>
                 <text class="userinfo-nickname">微信号:zgtt214</text>
             </view> 
-            <!-- <icon class="fa fa-angle-right fa-fw"/>  -->
         </view>
+         <icon class="fa fa-angle-right fa-fw"/>  
     </view>
 
     <view class="money">
