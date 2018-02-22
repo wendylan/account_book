@@ -1,6 +1,6 @@
 {
     "pages":[
-
+        "pages/splash/splash",
         "pages/index/index",
         "pages/account/consumption/consumption",
         "pages/account/earn/earn",

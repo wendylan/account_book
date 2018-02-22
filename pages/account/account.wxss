@@ -1,6 +1,9 @@
 /**account.wxss**/
-page{
+/* page{
     background: url('../../images/back.jpg');
+} */
+page{
+  height: 100%;
 }
 button{
     margin-top: 20px;
