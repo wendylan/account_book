@@ -1,6 +1,7 @@
 /* pages/bill/bill.wxss */
 .content{
     margin: 10px;
+    margin-bottom: 50px;
 }
 .text_blue{
     color: #1D8CE0;

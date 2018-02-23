@@ -2,9 +2,9 @@
 App({
     onLaunch: function() {
         //调用API从本地缓存中获取数据
-        var logs = wx.getStorageSync('logs') || []
-        logs.unshift(Date.now())
-        wx.setStorageSync('logs', logs)
+        // var logs = wx.getStorageSync('logs') || []
+        // logs.unshift(Date.now())
+        // wx.setStorageSync('logs', logs)
     },
 
     getUserInfo: function(cb) {
@@ -24,13 +24,13 @@ App({
     },
     // 获取用户浏览器的locastroge大小
     getLocastroge: function(){
-        // wx.getStorageInfo({
-        //     success: function (res) {
-        //         console.log(res.keys)
-        //         console.log(res.currentSize)
-        //         console.log(res.limitSize)
-        //     }
-        // })
+        wx.getStorageInfo({
+            success: function (res) {
+                console.log(res.keys)
+                console.log(res.currentSize)
+                console.log(res.limitSize)
+            }
+        })
     },
     globalData: {
         userInfo: null
