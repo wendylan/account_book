@@ -55,14 +55,14 @@
      <view class="flex_box">
         <view class="section__title">备注:</view>
         <view class="text_right">
-            <input type="digit" bindinput="bindRemarks" value="{{remarks_value}}"/>
+            <input type="text" bindinput="bindRemarks" value="{{remarks_value}}"/>
         </view>
     </view> 
 
     <progress percent="0" stroke-width="2" />
 
     <view class="button_box">
-        <button type="warn" size="default" bindtap="submitData"> 确认 </button>
+        <button type="primary" size="default" bindtap="submitData"> 确认 </button>
     </view>
     
 </view>

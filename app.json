@@ -1,10 +1,10 @@
 {
     "pages":[
-        "pages/splash/splash",
+
         "pages/index/index",
+        "pages/account/account",
         "pages/account/consumption/consumption",
         "pages/account/earn/earn",
-        "pages/account/account",
         "pages/bill/bill",
         "pages/analyze/analyze",
         "pages/my/my"
