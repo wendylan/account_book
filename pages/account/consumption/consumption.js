@@ -50,8 +50,16 @@ Page({
         })
     },
 
-    // 数据重构
-    organizeData(data){
+    // 提交数据
+    submitData : function(){
+        if(!this.data.sum_value){
+            this.showToast('请填写消费金额', 'loading');
+            return;
+        }
+        if(isNaN(+this.data.sum_value)){
+            this.showToast('消费金额错误', 'loading');
+            return;
+        }
         var bill = {
             _id: Date.parse(new Date()),
             sum_value: this.data.sum_value,
@@ -62,17 +70,12 @@ Page({
             billTypeNumber: this.billTypeNumber(this.data.account_type),
             consumption_or_earn: 0
         };
-        data.push(bill);
-        return data;
-    },
-    // 提交数据
-    submitData : function(){
-        // this.organizeData(this.data.oldStorageData);
+        this.data.oldStorageData.push(bill);
         wx.setStorage({
             key: "bill_arr",
-            data: this.organizeData(this.data.oldStorageData)
+            data: this.data.oldStorageData
         });
-        this.showToast();
+        this.showToast('记账成功', 'success');
         this.resetValue();
     },
 
@@ -108,10 +111,10 @@ Page({
     },
 
     // 显示记账成功提示
-    showToast(){
+    showToast(title, icon){
         wx.showToast({
-            title: '记账成功',
-            icon: 'success',
+            title: title,
+            icon: icon,
             duration: 2000
         });
     },

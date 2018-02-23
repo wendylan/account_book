@@ -12,7 +12,7 @@
     "window":{
         "backgroundTextStyle":"light",
         "navigationBarBackgroundColor": "black",
-        "navigationBarTitleText": "微记账",
+        "navigationBarTitleText": "嘿记账啦",
         "navigationBarTextStyle":"#fff",
         "backgroundColor" : "#eeeeee"
     },

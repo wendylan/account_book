@@ -32,3 +32,16 @@
 .time_box text{
     margin-right: 20rpx;
 }
+.icon_box{
+    display: inline-block; 
+    float: left;
+}
+
+.fix_box{
+    position:fixed;
+    left:0;
+    bottom:0;
+}
+.fix_box text{
+    margin: 0 15px;
+}

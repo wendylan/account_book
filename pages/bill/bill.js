@@ -6,6 +6,8 @@ Page({
      */
     data: {
         bill_arr : [],
+        earn_sum : 0,
+        consum_sum : 0
     },
     delOne: function(e){
         let _this = this;
@@ -45,13 +47,43 @@ Page({
         wx.getStorage({
             key: 'bill_arr',
             success: function (res) {
+                let result = _this.getEarnAndConsum(res.data);
+                console.log(result);
                 _this.setData({
-                    bill_arr: res.data
+                    bill_arr: res.data,
+                    earn_sum: result.earn,
+                    consum_sum: result.consum
                 });
             }
         });
     },
     
+    // 求花费和入账的分别和
+    getEarnAndConsum(data){
+        let result = {};
+        let earn = [];
+        let consum = [];
+        for(let item of data){
+            if(item.consumption_or_earn){
+                earn.push(item);
+            }else{
+                consum.push(item);
+            }
+        }
+        result.earn = this.getSum(earn);
+        result.consum = this.getSum(consum);
+        return result;
+    },
+
+    // 求和
+    getSum(data){
+        let sum = 0;
+        for(let item of data){
+            sum +=item.sum_value - 0;
+        }
+        return sum;
+    },
+
     /**
      * 生命周期函数--监听页面加载
      */
