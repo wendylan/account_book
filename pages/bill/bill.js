@@ -7,7 +7,8 @@ Page({
     data: {
         bill_arr : [],
         earn_sum : 0,
-        consum_sum : 0
+        consum_sum : 0,
+        isShow : false,
     },
     delOne: function(e){
         let _this = this;
@@ -81,9 +82,14 @@ Page({
         for(let item of data){
             sum +=item.sum_value - 0;
         }
-        return sum;
+        return parseInt(sum);
     },
 
+    selectResult(){
+        console.log(this.data.isShow);
+        this.data.isShow = !this.data.isShow;
+        console.log(this.data.isShow);
+    },
     /**
      * 生命周期函数--监听页面加载
      */

@@ -9,11 +9,6 @@
     margin: 8px 5px;
     clear: both;
 }
-.flex_box{
-    display: flex;
-    justify-content: space-between;
-    margin: 5px;
-}
 
 .section__title{
     display: inline-block;
@@ -28,6 +23,8 @@
 }
 .text_right{
     text-align: right;
+    display: inline-block;
+    width: 75%;
 }
 .button_box{
     margin-top:30px;

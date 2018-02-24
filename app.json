@@ -6,8 +6,7 @@
         "pages/account/consumption/consumption",
         "pages/account/earn/earn",
         "pages/bill/bill",
-        "pages/analyze/analyze",
-        "pages/my/my"
+        "pages/analyze/analyze"
     ],
     "window":{
         "backgroundTextStyle":"light",
@@ -43,12 +42,6 @@
                 "text" : "分析",
                 "iconPath": "images/safari.png",
                 "selectedIconPath": "images/safari-actived.png"
-            },
-            {
-                "pagePath" : "pages/my/my",
-                "text" : "我的",
-                "iconPath": "images/profile.png",
-                "selectedIconPath": "images/profile-actived.png"
             }
         ]
     },

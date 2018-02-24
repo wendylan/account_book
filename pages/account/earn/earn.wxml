@@ -42,7 +42,7 @@
     <progress percent="0" stroke-width="2" />
 
     <!-- 金额 -->
-     <view class="flex_box">
+     <view class="section">
         <view class="section__title">金额(￥):</view>
         <view class="text_right">
             <input bindinput="bindCountValue" type="digit" placeholder="" value="{{sum_value}}"/>
@@ -52,7 +52,7 @@
     <progress percent="0" stroke-width="2" />
     
     <!-- 备注 -->
-     <view class="flex_box">
+     <view class="section">
         <view class="section__title">备注:</view>
         <view class="text_right">
             <input type="text" bindinput="bindRemarks" value="{{remarks_value}}"/>
