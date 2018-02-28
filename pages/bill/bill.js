@@ -171,8 +171,10 @@ Page({
 
     // 是否展开筛选框
     selectResult(){
+        var check_value_arr = [];
         var isShow = this.data.isShow;
         this.setData({
+            check_value_arr: check_value_arr,
             isShow : !isShow
         });
     },
