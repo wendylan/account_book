@@ -5,11 +5,87 @@ Page({
      * 页面的初始数据
      */
     data: {
+        bill_arr_bat : [],
         bill_arr : [],
         earn_sum : 0,
         consum_sum : 0,
         isShow : false,
+        date : '',
+        check_value_arr : [],
+        items: [
+            {name: 'sgls', value: '水果零食'},
+            {name: 'cyhs', value: '餐饮伙食'},
+            {name: 'cxly', value: '出行旅游'},
+            {name: 'wsgw', value: '网上购物'},
+            {name: 'shrc', value: '生活日常'},
+            {name: 'cfsd', value: '租房水电'},
+            {name: 'ylyw', value: '医疗药物'},
+            {name: 'jbgz', value: '基本工资'},
+            {name: 'gsfl', value: '公司福利'},
+            {name: 'qt', value: '其它'}
+        ]
     },
+
+    // 多选框
+    checkboxChange: function(e) {
+        this.setData({
+            check_value_arr: e.detail.value
+        });
+    },
+
+    // 确定搜索过滤
+    confirmSearch(){
+        var query_condition = {
+            check_value_arr: this.data.check_value_arr,
+            date: this.data.date
+        };
+        var result = this.fetchBillArr(query_condition);
+        this.setData({
+            bill_arr: result, 
+            isShow: false
+        });
+    },
+
+    // 取消或者重置搜索
+    cancelSearch(){
+        var result = this.fetchBillArr();
+        this.setData({
+            bill_arr: result, 
+            isShow: false
+        });
+    },
+
+    // 返回查询数据
+    fetchBillArr(query_condition){
+        var bill_arr = this.data.bill_arr_bat || [];
+        console.log(query_condition);
+        if( query_condition ){
+            var date = query_condition.date;
+            var check_value_arr = query_condition.check_value_arr;
+            if(date){
+                var arr = [];
+                bill_arr.forEach((item,index) => {
+                    if(item.date == date){
+                        arr.push(item);
+                    }
+                });
+                bill_arr = arr;
+            }
+            if(check_value_arr.length){
+                var arr = [];
+                check_value_arr.forEach((item,index) => {
+                    bill_arr.forEach((it,i) => {
+                        if(it.billTypeNumber == item){
+                            arr.push(it);
+                        }
+                    });
+                });
+                bill_arr = arr;
+            }
+        }
+        return bill_arr;
+    },
+    // 删除一条数据
     delOne: function(e){
         let _this = this;
         wx.showModal({
@@ -51,6 +127,7 @@ Page({
                 let result = _this.getEarnAndConsum(res.data);
                 console.log(result);
                 _this.setData({
+                    bill_arr_bat: res.data, 
                     bill_arr: res.data,
                     earn_sum: result.earn,
                     consum_sum: result.consum
@@ -85,10 +162,19 @@ Page({
         return parseInt(sum);
     },
 
+    // 是否展开筛选框
     selectResult(){
-        console.log(this.data.isShow);
-        this.data.isShow = !this.data.isShow;
-        console.log(this.data.isShow);
+        var isShow = this.data.isShow;
+        this.setData({
+            isShow : !isShow
+        });
+    },
+
+    // 日期控制
+    bindDateChange: function (e) {
+        this.setData({
+            date: e.detail.value
+        })
     },
     /**
      * 生命周期函数--监听页面加载

@@ -67,7 +67,7 @@ Page({
             time: this.data.time,
             remarks_value: this.data.remarks_value,
             account_type: this.data.account_type,
-            billTypeNumber: this.billTypeNumber(this.data.account_type),
+            billTypeNumber: this.billTypeNumber(this.data.account_type - 0),
             consumption_or_earn: 1
         };
         this.data.oldStorageData.push(bill);
