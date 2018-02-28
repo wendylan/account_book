@@ -5,6 +5,7 @@
 }
 .text_blue{
     color: #1D8CE0;
+    margin-top: 30px;
 }
 .no_bill{
     color: #666;

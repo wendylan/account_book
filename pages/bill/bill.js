@@ -40,17 +40,24 @@ Page({
             date: this.data.date
         };
         var result = this.fetchBillArr(query_condition);
+        var earnConsum = this.getEarnAndConsum(result);
         this.setData({
             bill_arr: result, 
+            earn_sum: earnConsum.earn,
+            consum_sum: earnConsum.consum,
             isShow: false
         });
+        
     },
 
     // 取消或者重置搜索
     cancelSearch(){
         var result = this.fetchBillArr();
+        var earnConsum = this.getEarnAndConsum(result);
         this.setData({
             bill_arr: result, 
+            earn_sum: earnConsum.earn,
+            consum_sum: earnConsum.consum,
             isShow: false
         });
     },
