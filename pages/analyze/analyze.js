@@ -77,16 +77,18 @@ Page({
         });
         let earnText = ["基本工资", "公司福利", "其它入账"];
         let consumText = ["水果零食", "餐饮伙食", "出行旅游", "网上购物", "生活日常", "租房水电", "医疗药物", "其它消费"];
-        allData.earn = this.dataFormat(earnText, this.data.earn_chart_arr);
-        allData.consum = this.dataFormat(consumText, this.data.consumption_chart_arr);
+        let earnColor = ['#67C23A', '#E6A23C', '#F56C6C'];
+        let consumColor = ['#67C23A', '#E6A23C', '#F56C6C', '#3B58D9', '#9E3FC1', '#6C6868', '#22BCAD', '#BC3C22'];
+        allData.earn = this.dataFormat(earnText, this.data.earn_chart_arr, earnColor);
+        allData.consum = this.dataFormat(consumText, this.data.consumption_chart_arr, consumColor);
         return allData;
     },
 
     // 数据格式转换
-    dataFormat(arr, dataArr){
+    dataFormat(arr, dataArr, color){
         let data = [];
         for(let i = 0; i<arr.length; i++){
-            data.push({ 'name' : arr[i], 'data' : dataArr[i] });
+            data.push({ 'name' : arr[i], 'data' : dataArr[i], 'color': color[i] });
         }
         return data;
     },
