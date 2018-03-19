@@ -98,7 +98,7 @@ Page({
             type: 'pie',
             series: data,
             width: 350,
-            height: 220,
+            height: 300,
             dataLabel: true
         });
     },
@@ -106,7 +106,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        
+
     },
 
     /**
