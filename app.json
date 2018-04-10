@@ -7,7 +7,8 @@
         "pages/bill/bill",
         "pages/analyze/analyze",
         "pages/my/my",
-        "pages/pie/index"
+        "pages/pie/index",
+        "pages/multiCharts/index"
 
     ],
     "window":{ 
