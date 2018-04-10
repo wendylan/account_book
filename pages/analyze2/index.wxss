@@ -1,4 +1,4 @@
-#mychart-dom-multi-bar {
+#mychart-dom-consum {
     position: absolute;
     top: 0;
     bottom: 50%;
@@ -6,7 +6,7 @@
     right: 0;
 }
 
-#mychart-dom-multi-scatter {
+#mychart-dom-earn {
     position: absolute;
     top: 50%;
     bottom: 0;

@@ -48,7 +48,7 @@ Page({
     // 打开分析图
     open: function () {
       wx.navigateTo({
-        url: '../multiCharts/index'
+        url: '../analyze2/index'
       })
     },
 

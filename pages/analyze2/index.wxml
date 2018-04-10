@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar }}"></ec-canvas>
+  <ec-canvas id="mychart-dom-multi-scatter" canvas-id="mychart-multi-scatter" ec="{{ ecScatter }}"></ec-canvas>
+</view>
+ -->
+
+
+<!--index.wxml-->
+<view class="container">
+	<text> this is a test</text>
+    <ec-canvas id="mychart-dom-consum" canvas-id="mychart-consum" ec="{{ ecConsum }}"></ec-canvas>
+    <ec-canvas id="mychart-dom-earn" canvas-id="mychart-earn" ec="{{ ecEarn }}"></ec-canvas>
+</view>
