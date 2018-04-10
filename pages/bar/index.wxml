@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="container">
+	<text> this is a test</text>
+	<ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+	<view>{{ec.onInit}}</view>
+</view>

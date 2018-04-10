@@ -1,28 +1,32 @@
+
+
 {
     "pages":[
-
         "pages/index/index",
         "pages/account/account",
         "pages/account/consumption/consumption",
         "pages/account/earn/earn",
         "pages/bill/bill",
-        "pages/analyze/analyze"
+        "pages/analyze/analyze",
+        "pages/my/my",
+        "pages/pie/index"
+
     ],
-    "window":{
+    "window":{ 
         "backgroundTextStyle":"light",
         "navigationBarBackgroundColor": "black",
         "navigationBarTitleText": "嘿记账啦",
         "navigationBarTextStyle":"#fff",
         "backgroundColor" : "#eeeeee"
-    },
-    "tabBar": {
+    }, 
+    "tabBar": {   
         "color": "#999",
         "selectedColor": "black",
         "list": [
             {
                 "pagePath" : "pages/index/index",
                 "text" : "首页",
-                "iconPath" : "images/home.png",
+                "iconPath" : "images/home.png", 
                 "selectedIconPath" : "images/home-actived.png"
             },
             {
@@ -43,6 +47,7 @@
                 "iconPath": "images/safari.png",
                 "selectedIconPath": "images/safari-actived.png"
             }
+            
         ]
     },
     "networkTimeout": {

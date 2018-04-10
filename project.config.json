@@ -1,16 +1,16 @@
 {
-	"description": "项目配置文件。",
+	"description": "ECharts 图表示例",
 	"setting": {
 		"urlCheck": true,
 		"es6": true,
-		"postcss": true,
-		"minified": true,
+		"postcss": false,
+		"minified": false,
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.91",
 	"appid": "wx1bd570aa91a0f20a",
-	"projectname": "account_book",
+	"projectname": "ECharts%20Demo",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -18,10 +18,6 @@
 		},
 		"conversation": {
 			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {

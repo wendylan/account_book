@@ -1,7 +1,14 @@
-//index.js
 //获取应用实例
 var app = getApp()
 Page({
+    onShareAppMessage: function (res) {
+      return {
+        title: 'ECharts 可以在微信小程序中使用啦！',
+        path: '/pages/index/index',
+        success: function () {},
+        fail: function () {}
+      }
+    },
     data: {
         moviesData : [],
         userInfo: {}
@@ -38,4 +45,11 @@ Page({
             url: '../account/earn/earn'
         })
     },
+    // 打开分析图
+    open: function () {
+      wx.navigateTo({
+        url: '../pie/index'
+      })
+    },
+
 })
