@@ -10,9 +10,7 @@ Page({
 	},
 	data: {
 		ecEarn: {
-			// onInit: initChartEarn
 			onInit: function (canvas, width, height) {
-				console.log('this is a test');
 				const initChartEarn = echarts.init(canvas, null, {
 					width: width,
 					height: height
@@ -26,7 +24,6 @@ Page({
 			}
 		},
 		ecConsum: {
-			// onInit: initChartConsum
 			onInit: function (canvas, width, height) {
 				const initChartConsum = echarts.init(canvas, null, {
 					width: width,
@@ -57,8 +54,12 @@ Page({
 					bill_arr: res.data
 				});
 				let temp = _this.changeDataFormat();
-				_this.data.consumption_chart_data = temp.consum;
-				_this.data.earn_chart_data = temp.earn;
+				_this.setData({
+					consumption_chart_data: temp.consum,
+					earn_chart_data: temp.earn
+				});
+				// _this.data.consumption_chart_data = temp.consum;
+				// _this.data.earn_chart_data = temp.earn;
 				console.log(getCurrentPages());
 			}
 		});
