@@ -52,4 +52,11 @@ Page({
       })
     },
 
+    // 打开多图页面
+    openMulTip(){
+        wx.navigateTo({
+            url: '../multiCharts/index'
+        });
+    },
+
 })

@@ -141,7 +141,7 @@ function getEarnOption() {
 	console.log(getCurrentPages()[0].data.earn_chart_data);
 	return {
 		backgroundColor: "#ffffff",
-		color: ['#67C23A', '#E6A23C', '#F56C6C', '#3B58D9', '#9E3FC1', '#6C6868', '#22BCAD', '#BC3C22'],
+		color: ['#67C23A', '#E6A23C', '#F56C6C'] ,
 		// tooltip : {
 		// trigger: 'item',
 		// formatter: "{a} <br/>{b} : {c} ({d}%)"
@@ -191,7 +191,7 @@ function getEarnOption() {
 function getConsumOption() {
 	return {
 		backgroundColor: "#ffffff",
-		color: ['#67C23A', '#E6A23C', '#F56C6C'],
+		color: ['#67C23A', '#E6A23C', '#F56C6C', '#3B58D9', '#9E3FC1', '#6C6868', '#22BCAD', '#BC3C22'],
 		// tooltip: {
 		//  trigger: 'item',
 		//  formatter: "{a} <br/>{b} : {c} ({d}%)"
