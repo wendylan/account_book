@@ -9,7 +9,8 @@
 		"pages/analyze2/index",
 		"pages/my/my",
 		"pages/pie/index",
-		"pages/multiCharts/index"
+		"pages/multiCharts/index",
+		"pages/images/images"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

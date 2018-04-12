@@ -57,5 +57,9 @@ Page({
             url: '../multiCharts/index'
         });
     },
-
+	openImage(){
+		wx.navigateTo({
+			url: '../images/images',
+		});
+	},
 })
