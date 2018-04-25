@@ -29,6 +29,16 @@ Page({
             })
         })
         app.getLocastroge();
+        wx.request({
+            url: 'https://api.douban.com//v2/movie/top250',
+            header: {
+                'content-type': 'application/json' // 默认值
+            },
+            dataType:'JSONP',
+            success: function (res) {
+                console.log(res.data)
+            }
+        });
     },
     
     // 消费
